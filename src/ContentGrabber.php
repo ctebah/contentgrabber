@@ -48,7 +48,7 @@ class ContentGrabber {
     
     /**
      *
-     * @var \Xrt\Xrtfetcher\CacheSimple\File
+     * @var \Xrt\CacheSimple\File
      */
     protected $cache_obj = null;
     
@@ -321,11 +321,11 @@ class ContentGrabber {
     
     /**
      *
-     * @return \Xrt\Xrtfetcher\CacheSimple\File
+     * @return \Xrt\CacheSimple\File
      */
     public function getCacheObj() {
         if (!isset($this->cache_obj)) {
-            $this->cache_obj = new \Xrt\Xrtfetcher\CacheSimple\File(array(
+            $this->cache_obj = new \Xrt\CacheSimple\File(array(
                 'root_subdir'   => 'remotedata-xrt/',
                 'chmod_dir'     => 0777,
                 'chmod_file'    => 0777,
@@ -336,9 +336,9 @@ class ContentGrabber {
     
     /**
      *
-     * @param \Xrt\Xrtfetcher\CacheSimple\File $cache_obj
+     * @param \Xrt\Fetcher\CacheSimple\File $cache_obj
      */
-    public function setCacheObj(\Xrt\Xrtfetcher\CacheSimple\File $cache_obj) {
+    public function setCacheObj(\Xrt\CacheSimple\File $cache_obj) {
         $this->cache_obj = $cache_obj;
         return $this;
     }

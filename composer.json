@@ -1,21 +1,19 @@
 {
 	"autoload" : {
 		"psr-4" : {
-			"Xrt\\Xrtfetcher\\" : "src"
+			"Xrt\\ContentGrabber\\" : "src"
 		}
 	},
-	"name" : "xrt/xrtfetcher",
+	"repositories" : {
+        "cachesimple": {
+            "type" : "vcs",
+            "url" : "https://bitbucket.org/ctebah/cachesimple.git"
+        }
+    },
+	"name" : "xrt/contentgrabber",
 	"type" : "git",
-	"repositories" : [{
-			"type" : "vcs",
-			"url" : "https://bitbucket.org/ctebah/dateparser.git"
-		}
-	],
 	"require" : {
 		"php" : ">=5.5",
-		"psr/http-message" : "~1.0",
-		"guzzlehttp/psr7" : "~1.1",
-		"guzzlehttp/guzzle" : ">=6.1.1",
-		"xrt/dateparser" : "dev-master"
+        "xrt/cachesimple" : "dev-master"
 	}
 }
