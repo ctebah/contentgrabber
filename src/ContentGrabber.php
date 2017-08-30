@@ -214,7 +214,7 @@ class ContentGrabber {
         $out = array();
         foreach ($arrays as $key => $value) {
             $k = isset($prefix) ? $prefix . '[' . $key . ']' : $key;
-            if ($value instanceof CURLFile) {
+            if ($value instanceof \CURLFile) {
                 $out[$k] = $value;
             } elseif (is_array($value) || is_object($value)) {
                 $out += $this->http_build_query_for_curl($value, $k);
